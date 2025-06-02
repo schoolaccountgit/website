@@ -95,27 +95,31 @@
       padding: 0 1rem;
     }
 
+    /* subtle geometric pattern as a base */
     .features,
-    .pricing,
-    .about {
-      display: flex;
-      justify-content: space-around;
-      gap: 2rem;
-      flex-wrap: wrap;
+    .pricing {
+      position: relative;
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(100, 255, 218, 0.1), transparent 70%),
+        radial-gradient(circle at 80% 80%, rgba(100, 255, 218, 0.1), transparent 70%),
+        linear-gradient(135deg, #e0f7f4 0%, #ffffff 100%);
+      border-radius: 12px;
+      padding: 2.5rem 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
       margin-bottom: 4rem;
+      overflow: hidden;
     }
 
-    .feature,
-    .pricing-plan,
-    .about-section {
+    /* slightly adjust feature and pricing cards spacing */
+    .features > .feature,
+    .pricing > .pricing-plan {
       background: white;
-      padding: 1.8rem 1.5rem;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       border-radius: 10px;
-      flex: 1 1 280px;
-      text-align: center;
+      padding: 1.8rem 1.5rem;
       transition: transform 0.3s ease;
     }
+
 
     .feature:hover,
     .pricing-plan:hover,
