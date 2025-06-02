@@ -49,7 +49,7 @@
     .hero {
       position: relative;
       height: 75vh;
-      background: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      background: url('https://images.unsplash.com/photo-1484788984921-03950022c9ef?q=80&w=1532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,24 +83,6 @@
       line-height: 1.6;
       margin-bottom: 2rem;
       text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
-    }
-
-    .btn-primary {
-      background-color: #64ffda;
-      color: #0a192f;
-      padding: 0.8rem 2.2rem;
-      font-weight: 700;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-primary:hover {
-      background-color: #52d8c2;
     }
 
     main {
@@ -143,12 +125,68 @@
       line-height: 1.4;
     }
 
+    #contact {
+      background: white;
+      padding: 2rem;
+      max-width: 400px;
+      margin: 0 auto 3rem auto;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    #contact h2 {
+      margin-bottom: 1rem;
+      color: #0a192f;
+    }
+
+    #contact p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    #contact label {
+      font-weight: 600;
+      text-align: left;
+    }
+
+    #contact input,
+    #contact textarea {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    #contact button {
+      background-color: #64ffda;
+      color: #0a192f;
+      padding: 0.8rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #contact button:hover {
+      background-color: #52d8c2;
+    }
+
     footer {
       background-color: #0a192f;
       color: white;
       text-align: center;
       padding: 1rem 2rem;
-      margin-top: 3rem;
       font-size: 0.9rem;
     }
 
@@ -159,7 +197,6 @@
         align-items: center;
       }
     }
-
   </style>
 </head>
 <body>
@@ -178,7 +215,6 @@
   <div class="hero-content">
     <h1>Automate Your Sales Calls with AI</h1>
     <p>Reach more customers, close more deals — without lifting a finger.</p>
-    <a href="#contact" class="btn-primary">Get a Demo</a>
   </div>
 </section>
 
@@ -200,18 +236,18 @@
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Interested? Reach out for a demo or pricing details.</p>
-    <form style="max-width: 400px; margin-top: 1rem;">
-      <label for="name">Name</label><br/>
-      <input id="name" name="name" type="text" required style="width:100%; padding:0.5rem; margin-bottom: 1rem;"/>
+    <p>If you're interested in our AI automated cold call services, please fill out the form below and we will get back to you shortly.</p>
+    <form>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
 
-      <label for="email">Email</label><br/>
-      <input id="email" name="email" type="email" required style="width:100%; padding:0.5rem; margin-bottom: 1rem;"/>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
 
-      <label for="message">Message</label><br/>
-      <textarea id="message" name="message" rows="4" required style="width:100%; padding:0.5rem; margin-bottom: 1rem;"></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
 
-      <button type="submit" class="btn-primary" style="width: 100%;">Send</button>
+      <button type="submit">Send</button>
     </form>
   </section>
 </main>
