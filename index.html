@@ -93,33 +93,63 @@
       max-width: 1000px;
       margin: 3rem auto;
       padding: 0 1rem;
-    }
-
-    /* subtle geometric pattern as a base */
-    .features,
-    .pricing {
       position: relative;
-      background: 
-        radial-gradient(circle at 20% 20%, rgba(100, 255, 218, 0.1), transparent 70%),
-        radial-gradient(circle at 80% 80%, rgba(100, 255, 218, 0.1), transparent 70%),
-        linear-gradient(135deg, #e0f7f4 0%, #ffffff 100%);
+      background: #fff;
       border-radius: 12px;
-      padding: 2.5rem 1rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-      margin-bottom: 4rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       overflow: hidden;
     }
 
-    /* slightly adjust feature and pricing cards spacing */
-    .features > .feature,
-    .pricing > .pricing-plan {
-      background: white;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      border-radius: 10px;
-      padding: 1.8rem 1.5rem;
-      transition: transform 0.3s ease;
+    /* subtle abstract shape in background using SVG as data URI */
+    main::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      right: -150px;
+      width: 400px;
+      height: 400px;
+      background: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='200' cy='200' r='200' fill='%2364FFDA' fill-opacity='0.1'/%3E%3C/svg%3E") no-repeat;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(40px);
     }
 
+    /* Section Dividers */
+    section {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #e1e1e1;
+      position: relative;
+      z-index: 1;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .features,
+    .pricing,
+    .about {
+      display: flex;
+      justify-content: space-around;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .feature,
+    .pricing-plan,
+    .about-section {
+      background: white;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      flex: 1 1 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
 
     .feature:hover,
     .pricing-plan:hover,
@@ -133,6 +163,11 @@
     .about-section h3 {
       margin-bottom: 1rem;
       color: #0a192f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-weight: 700;
     }
 
     .feature p,
@@ -141,6 +176,16 @@
       color: #555;
       font-size: 1rem;
       line-height: 1.4;
+      margin-top: 0.4rem;
+    }
+
+    /* Icons for features */
+    .feature svg {
+      width: 28px;
+      height: 28px;
+      stroke: #64ffda;
+      stroke-width: 2;
+      flex-shrink: 0;
     }
 
     /* Pricing specific styling */
@@ -169,6 +214,8 @@
       border-radius: 10px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     #contact h2 {
@@ -209,9 +256,10 @@
       outline: none;
     }
 
+    /* Professional Send Button style */
     #contact button {
-      background-color: #112240; /* dark navy */
-      color: #e0e0e0;            /* soft off-white */
+      background-color: #112240;
+      color: #e0e0e0;
       padding: 0.85rem 1.8rem;
       font-weight: 600;
       font-size: 1.1rem;
@@ -224,12 +272,11 @@
 
     #contact button:hover,
     #contact button:focus {
-      background-color: #1b2a50; /* lighter navy */
+      background-color: #1b2a50;
       color: #fff;
       box-shadow: 0 6px 15px rgba(0,0,0,0.25);
       outline: none;
     }
-
 
     footer {
       background-color: #0a192f;
@@ -274,15 +321,35 @@
 <main>
   <section id="features" class="features" aria-label="Features">
     <div class="feature">
-      <h3>AI-Driven Conversations</h3>
+      <h3>
+        <!-- Phone Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h2l3 5 4-3 4 3 3-5h2" />
+        </svg>
+        AI-Driven Conversations
+      </h3>
       <p>Our AI understands customer responses and adapts in real-time to close more sales.</p>
     </div>
     <div class="feature">
-      <h3>Custom Product Pitching</h3>
+      <h3>
+        <!-- Target Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke-width="2"/>
+          <circle cx="12" cy="12" r="6" stroke-width="2"/>
+          <circle cx="12" cy="12" r="2" stroke-width="2"/>
+        </svg>
+        Custom Product Pitching
+      </h3>
       <p>We tailor calls to match your product and audience for maximum engagement.</p>
     </div>
     <div class="feature">
-      <h3>Scalable & Reliable</h3>
+      <h3>
+        <!-- Cloud Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-width="2" d="M3 15a4 4 0 018 0 4 4 0 016 0 4 4 0 014-4 4 4 0 00-4-4 6 6 0 00-11.5 3.5"/>
+        </svg>
+        Scalable & Reliable
+      </h3>
       <p>Deploy thousands of calls simultaneously with secure cloud hosting and 24/7 uptime.</p>
     </div>
   </section>
