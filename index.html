@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Modern Sample Website</title>
+  <title>AI Automated Cold Calls | YourCompanyName</title>
   <style>
-    /* Reset some default margins and paddings */
     * {
       margin: 0;
       padding: 0;
@@ -16,20 +15,21 @@
       height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f0f2f5;
-      color: #333;
+      color: #222;
     }
 
     header {
-      background-color: #222;
+      background-color: #0a192f;
       color: white;
       padding: 1rem 2rem;
       text-align: center;
       font-weight: 700;
-      letter-spacing: 1.2px;
+      letter-spacing: 1.5px;
+      font-size: 1.8rem;
     }
 
     nav {
-      background-color: #333;
+      background-color: #112240;
       padding: 0.8rem 2rem;
       text-align: center;
     }
@@ -43,13 +43,13 @@
     }
 
     nav a:hover {
-      color: #4caf50;
+      color: #64ffda;
     }
 
     .hero {
       position: relative;
-      height: 70vh;
-      background: url('https://images.unsplash.com/photo-1484788984921-03950022c9ef?q=80&w=1532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+      height: 75vh;
+      background: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -58,12 +58,11 @@
       padding: 0 1rem;
     }
 
-    /* Overlay with slight dark tint */
     .hero::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(10, 25, 47, 0.7);
       z-index: 0;
     }
 
@@ -76,73 +75,149 @@
     .hero-content h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
     }
 
     .hero-content p {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       line-height: 1.6;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+    }
+
+    .btn-primary {
+      background-color: #64ffda;
+      color: #0a192f;
+      padding: 0.8rem 2.2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background-color: #52d8c2;
     }
 
     main {
-      max-width: 900px;
-      margin: 2rem auto;
+      max-width: 1000px;
+      margin: 3rem auto;
       padding: 0 1rem;
     }
 
+    .features {
+      display: flex;
+      justify-content: space-around;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+
+    .feature {
+      background: white;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      flex: 1 1 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .feature h3 {
+      margin-bottom: 1rem;
+      color: #0a192f;
+    }
+
+    .feature p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
     footer {
-      background-color: #222;
+      background-color: #0a192f;
       color: white;
       text-align: center;
       padding: 1rem 2rem;
-      margin-top: 4rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
     }
 
-    /* Responsive text scaling */
-    @media (max-width: 600px) {
-      .hero-content h1 {
-        font-size: 2rem;
-      }
-
-      .hero-content p {
-        font-size: 1rem;
+    /* Responsive */
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
       }
     }
+
   </style>
 </head>
 <body>
 
 <header>
-  <h1>My Modern Website</h1>
+  YourCompanyName - AI Automated Cold Calls
 </header>
 
 <nav>
   <a href="#">Home</a>
-  <a href="#">Services</a>
-  <a href="#">Portfolio</a>
-  <a href="#">Contact</a>
+  <a href="#features">Features</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Welcome to Our Creative Space</h1>
-    <p>Building modern, beautiful websites that bring your ideas to life.</p>
+    <h1>Automate Your Sales Calls with AI</h1>
+    <p>Reach more customers, close more deals — without lifting a finger.</p>
+    <a href="#contact" class="btn-primary">Get a Demo</a>
   </div>
 </section>
 
 <main>
-  <h2>About Us</h2>
-  <p>
-    We are passionate about crafting sleek, user-friendly websites with attention to detail and performance. Whether you want a portfolio, a business site, or an online store, we tailor the experience to your needs.
-  </p>
-  <p>
-    Explore our services and get in touch to start your project today!
-  </p>
+  <section id="features" class="features">
+    <div class="feature">
+      <h3>AI-Driven Conversations</h3>
+      <p>Our AI understands customer responses and adapts in real-time to close more sales.</p>
+    </div>
+    <div class="feature">
+      <h3>Custom Product Pitching</h3>
+      <p>We tailor calls to match your product and audience for maximum engagement.</p>
+    </div>
+    <div class="feature">
+      <h3>Scalable & Reliable</h3>
+      <p>Deploy thousands of calls simultaneously with secure cloud hosting and 24/7 uptime.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Interested? Reach out for a demo or pricing details.</p>
+    <form style="max-width: 400px; margin-top: 1rem;">
+      <label for="name">Name</label><br/>
+      <input id="name" name="name" type="text" required style="width:100%; padding:0.5rem; margin-bottom: 1rem;"/>
+
+      <label for="email">Email</label><br/>
+      <input id="email" name="email" type="email" required style="width:100%; padding:0.5rem; margin-bottom: 1rem;"/>
+
+      <label for="message">Message</label><br/>
+      <textarea id="message" name="message" rows="4" required style="width:100%; padding:0.5rem; margin-bottom: 1rem;"></textarea>
+
+      <button type="submit" class="btn-primary" style="width: 100%;">Send</button>
+    </form>
+  </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 Your Name. All rights reserved.</p>
+  &copy; 2025 YourCompanyName. All rights reserved.
 </footer>
 
 </body>
