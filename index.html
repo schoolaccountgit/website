@@ -1,70 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sample Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Sample Website</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset some default margins and paddings */
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
     }
 
     header {
-      background-color: #333;
+      background-color: #222;
       color: white;
       padding: 1rem 2rem;
       text-align: center;
+      font-weight: 700;
+      letter-spacing: 1.2px;
     }
 
     nav {
-      background-color: #444;
-      padding: 0.5rem 2rem;
+      background-color: #333;
+      padding: 0.8rem 2rem;
+      text-align: center;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-right: 1rem;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #4caf50;
+    }
+
+    .hero {
+      position: relative;
+      height: 70vh;
+      background: url('https://images.unsplash.com/photo-1484788984921-03950022c9ef?q=80&w=1532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    /* Overlay with slight dark tint */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
 
     main {
-      padding: 2rem;
-      background-color: white;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
     footer {
-      background-color: #333;
+      background-color: #222;
       color: white;
       text-align: center;
       padding: 1rem 2rem;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      margin-top: 4rem;
+    }
+
+    /* Responsive text scaling */
+    @media (max-width: 600px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Sample Website</h1>
-  </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+<header>
+  <h1>My Modern Website</h1>
+</header>
 
-  <main>
-    <h2>About This Site</h2>
-    <p>This is a simple HTML sample website to demonstrate basic structure and styling.</p>
-    <p>You can modify the content and styles to suit your needs.</p>
-  </main>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Services</a>
+  <a href="#">Portfolio</a>
+  <a href="#">Contact</a>
+</nav>
 
-  <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
-  </footer>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Our Creative Space</h1>
+    <p>Building modern, beautiful websites that bring your ideas to life.</p>
+  </div>
+</section>
+
+<main>
+  <h2>About Us</h2>
+  <p>
+    We are passionate about crafting sleek, user-friendly websites with attention to detail and performance. Whether you want a portfolio, a business site, or an online store, we tailor the experience to your needs.
+  </p>
+  <p>
+    Explore our services and get in touch to start your project today!
+  </p>
+</main>
+
+<footer>
+  <p>&copy; 2025 Your Name. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
